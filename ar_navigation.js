@@ -29,7 +29,7 @@ function render_elements(){
                 if(i>0){
                     $("#scene_container").append(
                         `<a-entity gps-entity-place="latitude:${steps[i].maneuver.location[i]};longitude:${steps[i].maneuver.location[0]}>
-                            <a-image name="${instruction}" src="./assets/${images[image]}" look-at="#step_${i-1}" scale="5 5 5" id="step_${i}" position="0 0 0"></a-image>
+                            <a-image name="${instruction}" src="./${images[image]}" look-at="#step_${i-1}" scale="5 5 5" id="step_${i}" position="0 0 0"></a-image>
                             <a-entity>
                                 <a-text height="50" value="${instruction}(${distance}m)"></a-text>
                             </a-entity>
@@ -39,7 +39,7 @@ function render_elements(){
                 else{
                     $("#scene_container").append(
                         `<a-entity gps-entity-place="latitude:${steps[i].maneuver.location[i]};longitude:${steps[i].maneuver.location[0]}>
-                            <a-image name="${instruction}" src="./assets/ar_start.png" look-at="#step_${i+1}" scale="5 5 5" id="step_${i}" position="0 0 0"></a-image>
+                            <a-image name="${instruction}" src="./ar_start.png" look-at="#step_${i+1}" scale="5 5 5" id="step_${i}" position="0 0 0"></a-image>
                             <a-entity>
                                 <a-text height="50" value="${instruction}(${distance}m)"></a-text>
                             </a-entity>
